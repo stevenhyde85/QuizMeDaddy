@@ -1,0 +1,368 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+    font-family: b nazanin;
+    transition: 0.2s;
+  }
+  body {
+    background-color: rgb(29, 28, 28);
+  }
+  div {
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    width: 45%;
+    height: 300px;
+    background-color: rgb(136, 136, 136);
+  }
+  input {
+    margin-left: 15px;
+  }
+  .next {
+    border: none;
+    background-color: rgb(44, 37, 18);
+    color: rgb(69, 177, 73);
+    padding: 10px;
+    margin-right: 20px;
+    float: right;
+    border-radius: 10px;
+  }
+  .next:hover {
+    background-color: black;
+  }
+  .liveScore {
+    position: fixed;
+    top: 0px;
+    left: 22%;
+    display: inline-block;
+    border-radius: 20px;
+    width: 3%;
+    height: 300px;
+    background-color: rgb(168, 168, 168);
+  }
+  .liveScore p {
+    border-radius: 10px;
+    font-size: smaller;
+    font-family: b titr;
+    text-align: center;
+    background-color: rgb(240, 240, 183);
+  }
+    </style>
+  </head>
+  <body>
+    <div id="liveScore" class="liveScore">
+      <p id="q1r">1</p>
+      <p id="q2r">2</p>
+      <p id="q3r">3</p>
+      <p id="q4r">4</p>
+      <p id="q5r">5</p>
+      <p id="q6r">6</p>
+      <p id="q7r">7</p>
+      <p id="q8r">8</p>
+    </div>
+    <div id="q1">
+      <p style="text-align: right; padding: 15px;">
+        حاصل ضرب 4 در 8 معادل کدام گزینه است
+      </p>
+      <br />
+      <input type="radio" name="q1" value="16" /> 16<br /><br />
+      <input type="radio" name="q1" value="32" /> 32<br /><br />
+      <input type="radio" name="q1" value="24" /> 24<br /><br />
+      <input type="radio" name="q1" value="971" /> 971<br /><br />
+      <button class="next" type="button" onclick="question1()">بعدی</button>
+    </div>
+    <div style="display: none;" id="q2">
+      <p style="text-align: right; padding: 15px;">
+        حاصل ضرب 4 در 13 معادل کدام گزینه است
+      </p>
+      <br />
+      <input type="radio" name="q2" value="52" /> 52<br /><br />
+      <input type="radio" name="q2" value="62" /> 62<br /><br />
+      <input type="radio" name="q2" value="42" /> 42<br /><br />
+      <input type="radio" name="q2" value="874" /> 874<br /><br />
+      <button class="next" type="button" onclick="question2()">بعدی</button>
+    </div>
+    <div style="display: none;" id="q3">
+      <p style="text-align: right; padding: 15px;">
+        بزرگترین مضرب عدد 6 در اعداد زیر کدام است
+      </p>
+      <br />
+      <input type="radio" name="q3" value="72" /> 72<br /><br />
+      <input type="radio" name="q3" value="78" /> 78<br /><br />
+      <input type="radio" name="q3" value="64" /> 64<br /><br />
+      <input type="radio" name="q3" value="84" /> 84<br /><br />
+      <button class="next" type="button" onclick="question3()">بعدی</button>
+    </div>
+    <div style="display: none;" id="q4">
+      <p style="text-align: right; padding: 15px;">
+        عدد 14 به توان 2 معادل کدام یک از کزینه‌هاست
+      </p>
+      <br />
+      <input type="radio" name="q4" value="256" /> 156<br /><br />
+      <input type="radio" name="q4" value="186" /> 186<br /><br />
+      <input type="radio" name="q4" value="226" /> 226<br /><br />
+      <input type="radio" name="q4" value="196" /> 196<br /><br />
+      <button class="next" type="button" onclick="question4()">بعدی</button>
+    </div>
+    <div style="display: none;" id="q5">
+      <p style="text-align: right; padding: 15px;">
+        حاصل ضرب 13 در 7 معادل کدام یک از گزینه هاست
+      </p>
+      <br />
+      <input type="radio" name="q5" value="71" /> 71<br /><br />
+      <input type="radio" name="q5" value="91" /> 91<br /><br />
+      <input type="radio" name="q5" value="47" /> 47<br /><br />
+      <input type="radio" name="q5" value="77" /> 77<br /><br />
+      <button class="next" type="button" onclick="question5()">بعدی</button>
+    </div>
+    <div style="display: none;" id="q6">
+      <p style="text-align: right; padding: 15px;">
+        فاکتوریل عدد 6 معادل کدام یک از گزینه‌هاست
+      </p>
+      <br />
+      <input type="radio" name="q6" value="1440" /> 1440<br /><br />
+      <input type="radio" name="q6" value="720" /> 720<br /><br />
+      <input type="radio" name="q6" value="360" /> 360<br /><br />
+      <input type="radio" name="q6" value="0" /> 0<br /><br />
+      <button class="next" type="button" onclick="question6()">بعدی</button>
+    </div>
+    <div style="display: none;" id="q7">
+      <p style="text-align: right; padding: 15px;">
+        عدد 49 به توان 2 معادل کدام یک از گزینه‌هاست
+      </p>
+      <br />
+      <input type="radio" name="q7" value="2001" /> 2001<br /><br />
+      <input type="radio" name="q7" value="2051" /> 2051<br /><br />
+      <input type="radio" name="q7" value="2031" /> 2031<br /><br />
+      <input type="radio" name="q7" value="2401" /> 2401<br /><br />
+      <button class="next" type="button" onclick="question7()">بعدی</button>
+    </div>
+    <div style="display: none;" id="q8">
+      <p style="text-align: right; padding: 15px;">
+        مجموع تعداد چشم و گوش و بینی افراد در خانه ای 15 است، چند نفر در این
+        خانه زندگی میکنند
+      </p>
+      <input type="radio" name="q8" value="2" /> 2<br /><br />
+      <input type="radio" name="q8" value="3" /> 3<br /><br />
+      <input type="radio" name="q8" value="4" /> 4<br /><br />
+      <input type="radio" name="q8" value="5" /> 5<br /><br />
+      <button class="next" type="button" onclick="question8()">بعدی</button>
+    </div>
+    <div
+      style="
+        padding-top: 100px;
+        font-family: b nazanin;
+        display: none;
+        text-align: center;
+        height: 100px;
+        width: 30%;
+        height: 200px;
+        font-weight: bolder;
+      "
+      id="result"
+    ></div>
+    <br /><br />
+    <p style="color: lavender; text-align: center;">
+      زمان باقی مانده <span id="demo">3</span><span> ثانیه </span>
+    </p>
+    <p style="color: lavender; text-align: center;" id="demo2">
+      به زمان باقی مانده خود توجه داشته باشید
+    </p>
+    <script>
+      var correct = 0;
+      var wrong = 0;
+      var empty = 3;
+      var finalScore = document.getElementById("result");
+      function question1() {
+        document.getElementById("q1").style.display = "none";
+        document.getElementById("q2").style.display = "block";
+        var ele = document.getElementsByName("q1");
+        for (i = 0; i < ele.length; i++) {
+          if (ele[i].checked)
+            if (ele[i].value == 32) {
+              correct++;
+              document.getElementById("q1r").style.backgroundColor =
+                "rgb(69, 177, 73)";
+            } else {
+              wrong++;
+              document.getElementById("q1r").style.backgroundColor =
+                "rgb(134, 28, 28)";
+            }
+        }
+      }
+      function question2() {
+        document.getElementById("q2").style.display = "none";
+        document.getElementById("q3").style.display = "block";
+        var ele = document.getElementsByName("q2");
+        for (i = 0; i < ele.length; i++) {
+          if (ele[i].checked)
+            if (ele[i].value == 52) {
+              correct++;
+              document.getElementById("q2r").style.backgroundColor =
+                "rgb(69, 177, 73)";
+            } else {
+              wrong++;
+              document.getElementById("q2r").style.backgroundColor =
+                "rgb(134, 28, 28)";
+            }
+        }
+      }
+      function question3() {
+        document.getElementById("q3").style.display = "none";
+        document.getElementById("q4").style.display = "block";
+        var ele = document.getElementsByName("q3");
+        for (i = 0; i < ele.length; i++) {
+          if (ele[i].checked)
+            if (ele[i].value == 84) {
+              correct++;
+              document.getElementById("q3r").style.backgroundColor =
+                "rgb(69, 177, 73)";
+            } else {
+              wrong++;
+              document.getElementById("q3r").style.backgroundColor =
+                "rgb(134, 28, 28)";
+            }
+        }
+      }
+      function question4() {
+        document.getElementById("q4").style.display = "none";
+        document.getElementById("q5").style.display = "block";
+        var ele = document.getElementsByName("q4");
+        for (i = 0; i < ele.length; i++) {
+          if (ele[i].checked)
+            if (ele[i].value == 196) {
+              correct++;
+              document.getElementById("q4r").style.backgroundColor =
+                "rgb(69, 177, 73)";
+            } else {
+              wrong++;
+              document.getElementById("q4r").style.backgroundColor =
+                "rgb(134, 28, 28)";
+            }
+        }
+      }
+      function question5() {
+        document.getElementById("q5").style.display = "none";
+        document.getElementById("q6").style.display = "block";
+        var ele = document.getElementsByName("q5");
+        for (i = 0; i < ele.length; i++) {
+          if (ele[i].checked)
+            if (ele[i].value == 91) {
+              correct++;
+              document.getElementById("q5r").style.backgroundColor =
+                "rgb(69, 177, 73)";
+            } else {
+              wrong++;
+              document.getElementById("q5r").style.backgroundColor =
+                "rgb(134, 28, 28)";
+            }
+        }
+      }
+      function question6() {
+        document.getElementById("q6").style.display = "none";
+        document.getElementById("q7").style.display = "block";
+        var ele = document.getElementsByName("q6");
+        for (i = 0; i < ele.length; i++) {
+          if (ele[i].checked)
+            if (ele[i].value == 720) {
+              correct++;
+              document.getElementById("q6r").style.backgroundColor =
+                "rgb(69, 177, 73)";
+            } else {
+              wrong++;
+              document.getElementById("q6r").style.backgroundColor =
+                "rgb(134, 28, 28)";
+            }
+        }
+      }
+      function question7() {
+        document.getElementById("q7").style.display = "none";
+        document.getElementById("q8").style.display = "block";
+        var ele = document.getElementsByName("q7");
+        for (i = 0; i < ele.length; i++) {
+          if (ele[i].checked)
+            if (ele[i].value == 2401) {
+              correct++;
+              document.getElementById("q7r").style.backgroundColor =
+                "rgb(69, 177, 73)";
+            } else {
+              wrong++;
+              document.getElementById("q7r").style.backgroundColor =
+                "rgb(134, 28, 28)";
+            }
+        }
+      }
+      function question8() {
+        document.getElementById("q8").style.display = "none";
+        finalScore.style.display = "block";
+        var ele = document.getElementsByName("q8");
+        for (i = 0; i < ele.length; i++) {
+          if (ele[i].checked)
+            if (ele[i].value == 3) {
+              correct++;
+              document.getElementById("q8r").style.backgroundColor =
+                "rgb(69, 177, 73)";
+            } else {
+              wrong++;
+              document.getElementById("q8r").style.backgroundColor =
+                "rgb(134, 28, 28)";
+            }
+        }
+        empty = 8 - (correct + wrong);
+        clearInterval(interval);
+        clearInterval(endInterval);
+        finalScore.innerHTML =
+          "تعداد پاسخ‌های درست " +
+          correct +
+          "<br><br>تعداد پاسخ‌های غلط " +
+          wrong +
+          "<br><br>تعداد پاسخ‌های سفید " +
+          empty;
+      }
+      var text1 = document.getElementById("demo");
+      var text2 = document.getElementById("demo2");
+      text1.innerHTML = 90;
+      var interval = setInterval(manfi, 1000);
+      var endInterval = setInterval(stop, 1000);
+      var warningInterval = setInterval(warning, 1000);
+      function manfi() {
+        text1.innerHTML = text1.innerHTML - 1;
+      }
+      function warning() {
+        if (text1.innerHTML <= 10) {
+          setInterval(cheshmak, 1000);
+        }
+      }
+      function stop() {
+        if (text1.innerHTML <= 0) {
+          clearInterval(interval);
+          clearInterval(endInterval);
+          question8();
+          document.getElementById("q1").style.display = "none";
+          document.getElementById("q2").style.display = "none";
+          document.getElementById("q3").style.display = "none";
+          document.getElementById("q4").style.display = "none";
+          document.getElementById("q5").style.display = "none";
+          document.getElementById("q6").style.display = "none";
+          document.getElementById("q7").style.display = "none";
+          alert("پایان زمان");
+          text2.innerHTML = "وقت شما به پایان رسید";
+        } else {
+          text2.innerHTML = "به زمان باقی مانده خود توجه داشته باشید";
+        }
+      }
+      function cheshmak() {
+        text1.style.color = "white";
+        setTimeout(chechmak2, 500);
+      }
+      function chechmak2() {
+        text1.style.color = "red";
+      }
+    </script>
+  </body>
+</html>
